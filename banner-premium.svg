@@ -1,0 +1,35 @@
+<svg width="1200" height="500" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#696FC7"></stop>
+      <stop offset="100%" stop-color="#8A90E0"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1200" height="500" fill="url(#bg)"></rect>
+
+  <!-- Formas suaves -->
+  <circle cx="1000" cy="120" r="180" fill="#ffffff" opacity="0.05"></circle>
+  <circle cx="200" cy="420" r="220" fill="#ffffff" opacity="0.04"></circle>
+
+  <!-- Línea elegante -->
+  <rect x="100" y="260" width="60" height="3" fill="#ffffff" opacity="0.8"></rect>
+
+  <!-- Texto -->
+  <text x="100" y="190" fill="white" font-size="46" font-family="Poppins, Arial, sans-serif" font-weight="600" letter-spacing="1">
+    Atención psicológica
+  </text>
+
+  <text x="100" y="245" fill="white" font-size="46" font-family="Poppins, Arial, sans-serif" font-weight="600" letter-spacing="1">
+    cercana y profesional
+  </text>
+
+  <text x="100" y="310" fill="white" font-size="20" font-family="Poppins, Arial, sans-serif" opacity="0.9">
+    Acompañamiento emocional a domicilio y online
+  </text>
+
+  <text x="100" y="340" fill="white" font-size="20" font-family="Poppins, Arial, sans-serif" opacity="0.9">
+    Un espacio seguro, pensado para tu bienestar
+  </text>
+</svg>
