@@ -81,4 +81,138 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .card:active {
+      transform: scale(0.97);
+    }
+
+    footer {
+      background: #ddd;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp:hover { transform: scale(1.1); }
+    .whatsapp:active { transform: scale(0.9); }
+
+    .whatsapp img { width: 35px; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.svg">
+  <h1>María José Granda</h1>
+  <p>Psicóloga | Bienestar emocional y salud mental</p>
+
+  <a class="btn" href="https://wa.me/5930978958665?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20psicol%C3%B3gica">
+    Agendar cita
+  </a>
+</header>
+
+<section style="background:#696FC7; color:white; border-radius:10px;">
+  <h2 style="color:white;">Atención en la comodidad de tu hogar</h2>
+  <p style="text-align:center;">
+    Acompañamiento psicológico a domicilio y online con profesionalismo y cercanía.
+  </p>
+</section>
+
+<section>
+  <h2>¿Por qué elegirme?</h2>
+  <div class="grid">
+    <div class="card"><h3>🤝 Empatía</h3><p>Espacio seguro para expresarte.</p></div>
+    <div class="card"><h3>🔒 Confidencialidad</h3><p>Privacidad garantizada.</p></div>
+    <div class="card"><h3>🏠 A domicilio</h3><p>Desde tu hogar.</p></div>
+    <div class="card"><h3>💻 Online</h3><p>Desde cualquier lugar.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Servicios</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>🧸 Terapia infantil</h3>
+      <p>Apoyo emocional para niños.</p>
+      <a class="btn" href="https://wa.me/5930978958665?text=Hola%2C%20me%20interesa%20terapia%20infantil">Consultar</a>
+    </div>
+
+    <div class="card">
+      <h3>💬 Ansiedad</h3>
+      <p>Control emocional y mental.</p>
+      <a class="btn" href="https://wa.me/5930978958665?text=Hola%2C%20me%20interesa%20ansiedad">Consultar</a>
+    </div>
+
+    <div class="card">
+      <h3>🌿 Depresión</h3>
+      <p>Apoyo y recuperación emocional.</p>
+      <a class="btn" href="https://wa.me/5930978958665?text=Hola%2C%20me%20interesa%20depresion">Consultar</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 María José Granda</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5930978958665" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
+
+<!-- SCRIPT ANIMACIONES SCROLL -->
+<script>
+  const sections = document.querySelectorAll("section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+</body>
 </html>
