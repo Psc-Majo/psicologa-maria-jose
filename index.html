@@ -189,8 +189,18 @@
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
-      .hero {
-  height: 320px;
+  .hero {
+    height: auto; /* 🔥 CLAVE */
+    padding: 40px 20px; /* espacio arriba y abajo */
+  }
+}
+    .hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+    .btn {
+  margin-top: 10px;
 }
         
 
