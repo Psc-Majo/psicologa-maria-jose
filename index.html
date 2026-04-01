@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Psicóloga María José Granda</title>
 
-  <meta name="description" content="Psicóloga María José Granda. Terapia infantil, ansiedad y depresión. Atención profesional presencial a domicilio y online.">
+  <meta name="description" content="Psicóloga María José Granda. Terapia infantil, ansiedad y depresión. Atención a domicilio y online.">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -18,34 +18,25 @@
     }
 
     header {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1588776814546-ec7e6c1a4a35');
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+      url('https://images.unsplash.com/photo-1588776814546-ec7e6c1a4a35');
       background-size: cover;
       background-position: center;
       color: white;
       text-align: center;
       padding: 120px 20px;
-      animation: fadeIn 1.2s ease-in-out;
+      animation: fadeIn 1.2s ease;
     }
 
-    header img {
-      width: 110px;
-      margin-bottom: 20px;
-    }
+    header img { width: 110px; margin-bottom: 20px; }
 
-    h1 {
-      font-size: 42px;
-      margin: 0;
-      font-weight: 600;
-    }
+    h1 { font-size: 42px; margin: 0; }
 
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
+    p { line-height: 1.6; }
 
     .btn {
-      margin-top: 25px;
       display: inline-block;
+      margin-top: 20px;
       background: #696FC7;
       color: white;
       padding: 14px 30px;
@@ -61,133 +52,33 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
+    /* EFECTO PARA CELULAR */
+    .btn:active {
+      transform: scale(0.96);
+    }
+
     section {
       max-width: 1000px;
       margin: auto;
       padding: 60px 20px;
-      animation: fadeUp 1s ease;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     h2 {
-      color: #696FC7;
       text-align: center;
+      color: #696FC7;
       margin-bottom: 30px;
-      font-size: 28px;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-
-    footer {
-      text-align: center;
-      background: #ddd;
-      padding: 20px;
-    }
-
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
-    }
-
-    .whatsapp:hover {
-      transform: scale(1.1);
-    }
-
-    .whatsapp img {
-      width: 35px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-  </style>
-</head>
-<body>
-
-<header>
-  <img src="logo.svg" alt="Logo">
-  <h1>María José Granda</h1>
-  <p>Psicóloga | Bienestar emocional y salud mental</p>
-  <a class="btn" href="https://wa.me/5930978958665?text=Hola%2C%20buen%20d%C3%ADa.%20Me%20gustar%C3%ADa%20agendar%20una%20cita%20psicol%C3%B3gica.%20%C2%BFPodr%C3%ADa%20brindarme%20informaci%C3%B3n%20sobre%20disponibilidad%20y%20modalidades%20de%20atenci%C3%B3n%3F%20Gracias.">Agendar cita</a>
-</header>
-
-<section style="background:#696FC7; color:white; text-align:center; border-radius:10px;">
-  <h2 style="color:white;">Atención psicológica en la comodidad de tu hogar</h2>
-  <p>Llevo el acompañamiento psicológico hasta donde te sientas más seguro. Atención a domicilio y online con total confidencialidad.</p>
-</section>
-
-<section>
-  <h2>¿Por qué elegirme?</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>🤝 Atención cercana y empática</h3>
-      <p>Espacio seguro donde puedes expresarte libremente.</p>
-    </div>
-
-    <div class="card">
-      <h3>🔒 Confidencialidad garantizada</h3>
-      <p>Respeto absoluto por tu privacidad.</p>
-    </div>
-
-    <div class="card">
-      <h3>🏠 Atención a domicilio</h3>
-      <p>Sesiones en la comodidad de tu hogar.</p>
-    </div>
-
-    <div class="card">
-      <h3>💻 Terapia online</h3>
-      <p>Flexibilidad desde cualquier lugar.</p>
-    </div>
-
-    <div class="card">
-      <h3>🎯 Enfoque personalizado</h3>
-      <p>Cada proceso es único y adaptado a ti.</p>
-    </div>
-
-    <div class="card">
-      <h3>🌿 Acompañamiento integral</h3>
-      <p>Trabajo emocional completo y progresivo.</p>
-    </div>
-  </div>
-</section>
-
-</body>
 </html>
-
-
-
-
