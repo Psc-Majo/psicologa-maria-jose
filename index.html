@@ -17,26 +17,43 @@
       color: #333;
     }
 
-    header {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-      url('https://images.unsplash.com/photo-1588776814546-ec7e6c1a4a35');
-      background-size: cover;
-      background-position: center;
+    /* HERO */
+    .hero {
+      position: relative;
+      background: url('banner-premium.svg') no-repeat center/cover;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      padding: 0 60px;
       color: white;
-      text-align: center;
-      padding: 120px 20px;
-      animation: fadeIn 1.2s ease;
+      overflow: hidden;
     }
 
-    header img { width: 110px; margin-bottom: 20px; }
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.25);
+    }
 
-    h1 { font-size: 42px; margin: 0; }
+    .hero-content {
+      position: relative;
+      max-width: 600px;
+      animation: fadeUp 1.2s ease;
+    }
 
-    p { line-height: 1.6; }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
 
     .btn {
       display: inline-block;
-      margin-top: 20px;
       background: #696FC7;
       color: white;
       padding: 14px 30px;
@@ -52,7 +69,6 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
-    /* EFECTO PARA CELULAR */
     .btn:active {
       transform: scale(0.96);
     }
@@ -127,9 +143,28 @@
 
     .whatsapp img { width: 35px; }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero {
+        height: 420px;
+        padding: 0 20px;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .hero h1 { font-size: 32px; }
+      .hero p { font-size: 16px; }
     }
 
   </style>
@@ -137,23 +172,18 @@
 
 <body>
 
-<header>
-  <img src="logo.svg">
-  <h1>María José Granda</h1>
-  <p>Psicóloga | Bienestar emocional y salud mental</p>
+<header class="hero">
+  <div class="overlay"></div>
 
-  <a class="btn" href="https://wa.me/5930978958665?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20psicol%C3%B3gica">
-    Agendar cita
-  </a>
+  <div class="hero-content">
+    <h1>María José Granda</h1>
+    <p>Psicóloga | Bienestar emocional y salud mental</p>
+
+    <a class="btn" href="https://wa.me/5930978958665?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20psicol%C3%B3gica">
+      Agendar cita
+    </a>
+  </div>
 </header>
-
-<section style="padding:40px 20px;">
-  <img src="banner-premium.svg" style="
-    width:100%;
-    border-radius:12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  ">
-</section>
 
 <section>
   <h2>¿Por qué elegirme?</h2>
@@ -161,32 +191,32 @@
 
     <div class="card">
       <h3>🤝 Atención cercana y empática</h3>
-      <p>Espacio seguro donde puedes expresarte libremente y sentirte comprendido.</p>
+      <p>Espacio seguro donde puedes expresarte libremente.</p>
     </div>
 
     <div class="card">
       <h3>🔒 Confidencialidad garantizada</h3>
-      <p>Respeto total por tu privacidad y manejo ético de la información.</p>
+      <p>Respeto total por tu privacidad.</p>
     </div>
 
     <div class="card">
       <h3>🏠 Atención a domicilio</h3>
-      <p>Sesiones en la comodidad de tu hogar para mayor tranquilidad.</p>
+      <p>Sesiones en la comodidad de tu hogar.</p>
     </div>
 
     <div class="card">
       <h3>💻 Terapia online</h3>
-      <p>Flexibilidad para atenderte desde cualquier lugar.</p>
+      <p>Flexibilidad desde cualquier lugar.</p>
     </div>
 
     <div class="card">
       <h3>🎯 Enfoque personalizado</h3>
-      <p>Cada proceso se adapta a tus necesidades y objetivos personales.</p>
+      <p>Cada proceso se adapta a ti.</p>
     </div>
 
     <div class="card">
       <h3>🌿 Acompañamiento integral</h3>
-      <p>Trabajo emocional completo para lograr bienestar real y duradero.</p>
+      <p>Trabajo emocional completo.</p>
     </div>
 
   </div>
@@ -198,35 +228,20 @@
 
     <div class="card">
       <h3>🧸 Terapia infantil</h3>
-      <p>
-        Acompañamiento emocional para niños, enfocado en el manejo de conducta,
-        emociones y desarrollo personal de forma adaptada a su edad.
-      </p>
-      <a class="btn" href="https://wa.me/5930978958665?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20terapia%20infantil">
-        Consultar
-      </a>
+      <p>Acompañamiento emocional para niños, enfocado en el manejo de conducta, emociones y desarrollo personal de forma adaptada a su edad.</p>
+      <a class="btn" href="https://wa.me/5930978958665?text=Hola%20me%20interesa%20terapia%20infantil">Consultar</a>
     </div>
 
     <div class="card">
       <h3>💬 Ansiedad</h3>
-      <p>
-        Apoyo psicológico para gestionar ansiedad, estrés y pensamientos
-        recurrentes, ayudando a recuperar calma y equilibrio emocional.
-      </p>
-      <a class="btn" href="https://wa.me/5930978958665?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20ansiedad">
-        Consultar
-      </a>
+      <p>Apoyo psicológico para gestionar ansiedad, estrés y pensamientos recurrentes, ayudando a recuperar calma y equilibrio emocional.</p>
+      <a class="btn" href="https://wa.me/5930978958665?text=Hola%20me%20interesa%20ansiedad">Consultar</a>
     </div>
 
     <div class="card">
       <h3>🌿 Depresión</h3>
-      <p>
-        Acompañamiento terapéutico enfocado en mejorar el estado de ánimo,
-        fortalecer el bienestar emocional y recuperar motivación.
-      </p>
-      <a class="btn" href="https://wa.me/5930978958665?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20depresi%C3%B3n">
-        Consultar
-      </a>
+      <p>Acompañamiento terapéutico enfocado en mejorar el estado de ánimo, fortalecer el bienestar emocional y recuperar motivación.</p>
+      <a class="btn" href="https://wa.me/5930978958665?text=Hola%20me%20interesa%20depresion">Consultar</a>
     </div>
 
   </div>
@@ -240,7 +255,6 @@
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 </a>
 
-<!-- SCRIPT ANIMACIONES SCROLL -->
 <script>
   const sections = document.querySelectorAll("section");
 
@@ -256,6 +270,9 @@
     observer.observe(section);
   });
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
