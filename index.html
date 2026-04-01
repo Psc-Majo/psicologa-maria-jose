@@ -19,14 +19,16 @@
 
     /* HERO */
     .hero {
-      position: relative;
-      background: url('banner-premium.svg') no-repeat center/cover;
-      height: 500px;
-      display: flex;
-      align-items: center;
-      padding: 0 60px;
+       position: relative;
+       background: url('banner-premium.svg') no-repeat center/cover;
+       height: 380px; /* MÁS PEQUEÑO */
+       display: flex;
+       align-items: center;
+      justify-content: center; /* CENTRA */
+      text-align: center; /* CENTRA TEXTO */
+      padding: 0 20px;
       color: white;
-      overflow: hidden;
+       overflow: hidden;
     }
 
     .overlay {
@@ -37,20 +39,19 @@
     }
 
     .hero-content {
-      position: relative;
-      max-width: 600px;
-      animation: fadeUp 1.2s ease;
-    }
+  position: relative;
+  max-width: 700px;
+  margin: auto;
+  animation: fadeUp 1.2s ease;
+}
 
     .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+  font-size: 42px;
+}
 
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 25px;
-    }
+.hero p {
+  font-size: 18px;
+}
 
     .btn {
       display: inline-block;
@@ -157,11 +158,9 @@
     /* RESPONSIVE */
     @media (max-width: 768px) {
       .hero {
-        height: 420px;
-        padding: 0 20px;
-        text-align: center;
-        justify-content: center;
-      }
+  height: 320px;
+}
+        
 
       .hero h1 { font-size: 32px; }
       .hero p { font-size: 16px; }
