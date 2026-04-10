@@ -22,21 +22,21 @@
 
   /* HERO */
   .hero {
-    position: relative;
-    background: linear-gradient(
+  position: relative;
+  background: linear-gradient(
     135deg,
-    #CADFFD 0%,
-    #C3BEEF 40%,
-    #CCA9E8 100%
+    #251D4B 0%,
+    #3a2d6b 40%,
+    #C3BEEF 100%
   );
-    height: 420px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    color: white;
-  }
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
 
   .overlay {
     position: absolute;
@@ -84,34 +84,40 @@
     opacity: 0.95;
   }
 
-  .btn {
-    display: inline-block;
-    background: #CCA9E8;
-    color: #251D4B;
-    padding: 14px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-  }
+ .btn {
+  display: inline-block;
+  background: #251D4B; /* color fuerte */
+  color: #CADFFD; /* contraste suave */
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
 
-  .btn:hover {
-    background: #C3BEEF;
-    transform: translateY(-3px);
-  }
+.btn:hover {
+  background: #C3BEEF;
+  color: #251D4B;
+  transform: translateY(-3px);
+}
 
   section {
     max-width: 1200px; /* 🔥 MÁS ANCHO */
   padding: 60px 40px; /* MÁS AIRE */
     margin: auto;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
+     opacity: 0;
+  transform: translateY(60px) scale(0.98);
+  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
   }
-
+html, body {
+  overflow-x: hidden;
+}
+    {
+  box-sizing: border-box;
+}
   section.visible {
-    opacity: 1;
-    transform: translateY(0);
+   opacity: 1;
+  transform: translateY(0) scale(1);
   }
 
   h2 {
@@ -135,10 +141,12 @@
     text-align: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
+     backdrop-filter: blur(10px);
   }
 
   .card:hover {
-    transform: translateY(-5px);
+     transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
   }
 
   footer {
@@ -160,32 +168,6 @@
     align-items: center;
     justify-content: center;
   }
-/* FORMAS ORGÁNICAS */
-.blob {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 1;
-  filter: blur(60px);
-  z-index: 1;
-}
-
-/* Blob 1 */
-.blob1 {
-  width: 400px;
-  height: 400px;
-  background: #C3BEEF;
-  top: -100px;
-  left: -100px;
-}
-
-/* Blob 2 */
-.blob2 {
-  width: 400px;
-  height: 400px;
-  background: #CCA9E8;
-  bottom: -100px;
-  right: -100px;
-}
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -198,6 +180,50 @@
   }
 }
   .whatsapp img { width: 35px; }
+    
+@media (max-width: 768px) {
+  section {
+    padding: 40px 15px;
+  }
+
+  .logo {
+    width: 220px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+.premium-contact {
+  text-align: center;
+  background: linear-gradient(135deg, #C3BEEF, #CCA9E8);
+  border-radius: 20px;
+  margin: 60px 20px;
+  padding: 60px 30px;
+}
+
+.premium-contact h2 {
+  margin-bottom: 20px;
+}
+
+.premium-contact p {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.contact-box {
+  margin-top: 20px;
+}
+
+.mini {
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+.btn:active {
+  transform: scale(0.95);
+}
 
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(40px); }
@@ -220,9 +246,6 @@
 <body>
 
 <header class="hero">
-
-  <div class="blob blob1"></div>
-  <div class="blob blob2"></div>
 
   <div class="overlay"></div>
 
@@ -360,7 +383,27 @@
 </section>
 
 <footer>
-  <p>© 2026 María José Granda</p>
+  <section class="premium-contact">
+  <h2>Agenda tu espacio</h2>
+
+  <p>
+    Dar el primer paso puede ser difícil, pero no tienes que hacerlo solo.
+    Estoy aquí para acompañarte en tu proceso.
+  </p>
+
+  <div class="contact-box">
+
+    <a class="btn" href="https://wa.me/5930978958665?text=Hola%2C%20quiero%20agendar%20una%20cita%20psicol%C3%B3gica">
+      💬 Escribir por WhatsApp
+    </a>
+
+    <p class="mini">
+      📍 Atención en Guayaquil y modalidad online<br>
+      🕒 Disponibilidad limitada por semana
+    </p>
+
+  </div>
+</section>
 </footer>
 
 <a class="btn" href="https://wa.me/5930978958665?text=Hola%2C%20quiero%20agendar%20una%20cita">
@@ -376,11 +419,12 @@
         entry.target.classList.add("visible");
       }
     });
+  }, {
+    threshold: 0.2
   });
 
   sections.forEach(section => observer.observe(section));
 </script>
-
 </body>
 </html>
 
