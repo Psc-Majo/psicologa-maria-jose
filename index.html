@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Psicóloga María José Granda</title>
 
-  <meta name="description" content="Psicóloga María José Granda. Terapia infantil, ansiedad y depresión. Atención a domicilio y online.">
+  <meta name="description" content="Psicóloga en Guayaquil. Terapia infantil, ansiedad y depresión. Atención a domicilio y online.">
+  <meta name="keywords" content="psicóloga en Guayaquil, terapia online, ansiedad, depresión, terapia infantil">
+  <meta name="author" content="María José Granda">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -19,71 +22,50 @@
 
     /* HERO */
     .hero {
-       position: relative;
-       background: url('banner.svg') no-repeat center/cover;
-       height: 380px; /* MÁS PEQUEÑO */
-       display: flex;
-       align-items: center;
-      justify-content: center; /* CENTRA */
-      text-align: center; /* CENTRA TEXTO */
+      position: relative;
+      background: url('banner.svg') no-repeat center/cover;
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       padding: 0 20px;
       color: white;
-       overflow: hidden;
     }
-    .hero-bg-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-  font-size: 80px;
-  font-weight: 600;
-  line-height: 1.1;
-  text-align: center;
 
-  color: rgba(255, 255, 255, 0.08);
-
-  pointer-events: none;
-  user-select: none;
-}
-
-@media (max-width: 768px) {
-  .hero-bg-text {
-    font-size: 40px;
-  }
-}
-.hero .sub {
-  font-size: 22px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.hero .desc {
-  font-size: 18px;
-  margin-bottom: 25px;
-  opacity: 0.95;
-}
     .overlay {
       position: absolute;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.25);
+      background: rgba(0,0,0,0.3);
     }
 
     .hero-content {
-  position: relative;
-  max-width: 700px;
-  margin: auto;
-  animation: fadeUp 1.2s ease;
-}
+      position: relative;
+      max-width: 700px;
+      margin: auto;
+      animation: fadeUp 1.2s ease;
+    }
+
+    .logo {
+      width: 200px;
+      margin-bottom: 15px;
+    }
 
     .hero h1 {
-  font-size: 42px;
-}
+      font-size: 32px;
+      margin: 10px 0;
+    }
 
-.hero p {
-  font-size: 18px;
-}
+    .hero .sub {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .hero .desc {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
 
     .btn {
       display: inline-block;
@@ -100,10 +82,6 @@
       background: #555bc0;
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-
-    .btn:active {
-      transform: scale(0.96);
     }
 
     section {
@@ -146,10 +124,6 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
-    .card:active {
-      transform: scale(0.97);
-    }
-
     footer {
       background: #ddd;
       text-align: center;
@@ -167,137 +141,119 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
     }
-
-    .whatsapp:hover { transform: scale(1.1); }
-    .whatsapp:active { transform: scale(0.9); }
 
     .whatsapp img { width: 35px; }
 
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    /* RESPONSIVE */
     @media (max-width: 768px) {
-  .hero {
-    height: auto; /* 🔥 CLAVE */
-    padding: 40px 20px; /* espacio arriba y abajo */
-  }
-}
-    .hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-    .btn {
-  margin-top: 10px;
-}
-        
-
-      .hero h1 { font-size: 32px; }
-      .hero p { font-size: 16px; }
+      .hero { height: auto; padding: 40px 20px; }
     }
-
   </style>
 </head>
 
 <body>
 
 <header class="hero">
-  <div class="hero-bg-text">
-</div>
   <div class="overlay"></div>
 
   <div class="hero-content">
 
-  <h1>María José Granda</h1>
+    <!-- LOGO -->
+    <img src="logo.png" class="logo" alt="Logo Psicóloga">
 
-  <p class="sub">
-    Atención psicológica cercana y profesional
-  </p>
+    <h1>María José Granda</h1>
 
-  <p class="desc">
-    Acompañamiento emocional a domicilio y online<br>
-    Un espacio seguro, pensado para tu bienestar
-  </p>
+    <p class="sub">Atención psicológica cercana y profesional</p>
 
-  <a class="btn" href="https://wa.me/5930978958665?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20psicol%C3%B3gica">
-    Agendar cita
-  </a>
+    <p class="desc">
+      Acompañamiento emocional a domicilio y online<br>
+      Un espacio seguro para tu bienestar
+    </p>
 
-</div>
+    <a class="btn" href="https://wa.me/5930978958665?text=Hola%20quiero%20agendar%20una%20cita">
+      Agendar cita
+    </a>
+
+  </div>
 </header>
 
+<!-- SOBRE MI -->
+<section>
+  <h2>Sobre mí</h2>
+  <p style="text-align:center; max-width:700px; margin:auto;">
+    Soy María José Granda, psicóloga comprometida con el bienestar emocional de mis pacientes.
+    Mi enfoque se basa en la empatía, la escucha activa y el acompañamiento personalizado,
+    brindando un espacio seguro donde cada persona puede desarrollarse y sanar.
+  </p>
+</section>
+
+<!-- POR QUE ELEGIRME -->
 <section>
   <h2>¿Por qué elegirme?</h2>
   <div class="grid">
 
-    <div class="card">
-      <h3>🤝 Atención cercana y empática</h3>
-      <p>Espacio seguro donde puedes expresarte libremente.</p>
-    </div>
-
-    <div class="card">
-      <h3>🔒 Confidencialidad garantizada</h3>
-      <p>Respeto total por tu privacidad.</p>
-    </div>
-
-    <div class="card">
-      <h3>🏠 Atención a domicilio</h3>
-      <p>Sesiones en la comodidad de tu hogar.</p>
-    </div>
-
-    <div class="card">
-      <h3>💻 Terapia online</h3>
-      <p>Flexibilidad desde cualquier lugar.</p>
-    </div>
-
-    <div class="card">
-      <h3>🎯 Enfoque personalizado</h3>
-      <p>Cada proceso se adapta a ti.</p>
-    </div>
-
-    <div class="card">
-      <h3>🌿 Acompañamiento integral</h3>
-      <p>Trabajo emocional completo.</p>
-    </div>
+    <div class="card"><h3>🤝 Atención cercana</h3><p>Espacio seguro para expresarte.</p></div>
+    <div class="card"><h3>🔒 Confidencialidad</h3><p>Privacidad total.</p></div>
+    <div class="card"><h3>🏠 A domicilio</h3><p>Comodidad en tu hogar.</p></div>
+    <div class="card"><h3>💻 Online</h3><p>Desde cualquier lugar.</p></div>
+    <div class="card"><h3>🎯 Personalizado</h3><p>Adaptado a ti.</p></div>
+    <div class="card"><h3>🌿 Integral</h3><p>Trabajo emocional completo.</p></div>
 
   </div>
 </section>
 
+<!-- PROBLEMAS -->
+<section>
+  <h2>¿En qué puedo ayudarte?</h2>
+  <div class="grid">
+
+    <div class="card"><h3>😟 Ansiedad</h3><p>Controla el estrés y pensamientos repetitivos.</p></div>
+    <div class="card"><h3>😔 Depresión</h3><p>Recupera tu bienestar emocional.</p></div>
+    <div class="card"><h3>💔 Autoestima</h3><p>Fortalece tu confianza.</p></div>
+    <div class="card"><h3>👨‍👩‍👧 Familia</h3><p>Mejora relaciones y comunicación.</p></div>
+
+  </div>
+</section>
+
+<!-- SERVICIOS -->
 <section>
   <h2>Servicios</h2>
   <div class="grid">
 
     <div class="card">
       <h3>🧸 Terapia infantil</h3>
-      <p>Acompañamiento emocional para niños, enfocado en el manejo de conducta, emociones y desarrollo personal de forma adaptada a su edad.</p>
-      <a class="btn" href="https://wa.me/5930978958665?text=Hola%20me%20interesa%20terapia%20infantil">Consultar</a>
+      <p>Apoyo emocional adaptado a niños.</p>
+      <a class="btn" href="https://wa.me/5930978958665">Consultar</a>
     </div>
 
     <div class="card">
       <h3>💬 Ansiedad</h3>
-      <p>Apoyo psicológico para gestionar ansiedad, estrés y pensamientos recurrentes, ayudando a recuperar calma y equilibrio emocional.</p>
-      <a class="btn" href="https://wa.me/5930978958665?text=Hola%20me%20interesa%20ansiedad">Consultar</a>
+      <p>Manejo del estrés y equilibrio emocional.</p>
+      <a class="btn" href="https://wa.me/5930978958665">Consultar</a>
     </div>
 
     <div class="card">
       <h3>🌿 Depresión</h3>
-      <p>Acompañamiento terapéutico enfocado en mejorar el estado de ánimo, fortalecer el bienestar emocional y recuperar motivación.</p>
-      <a class="btn" href="https://wa.me/5930978958665?text=Hola%20me%20interesa%20depresion">Consultar</a>
+      <p>Recupera motivación y bienestar.</p>
+      <a class="btn" href="https://wa.me/5930978958665">Consultar</a>
     </div>
 
   </div>
+</section>
+
+<!-- CTA FINAL -->
+<section style="text-align:center;">
+  <h2>Agenda tu cita hoy</h2>
+  <p>Da el primer paso hacia tu bienestar emocional</p>
+
+  <a class="btn" href="https://wa.me/5930978958665">
+    Escribir por WhatsApp
+  </a>
 </section>
 
 <footer>
@@ -319,9 +275,7 @@
     });
   });
 
-  sections.forEach(section => {
-    observer.observe(section);
-  });
+  sections.forEach(section => observer.observe(section));
 </script>
 
 </body>
