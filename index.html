@@ -13,160 +13,201 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #F7F6E5;
-      color: #333;
-    }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #CADFFD, #C3BEEF, #CCA9E8);
+    color: #251D4B;
+  }
 
-    /* HERO */
+  /* HERO */
+  .hero {
+    position: relative;
+    background: #251D4B;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+  }
+
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.25);
+  }
+
+ .hero-content {
+  position: relative;
+  z-index: 2; /* 🔥 ESTO ES EL PASO 3 */
+  max-width: 700px;
+  margin: auto;
+  animation: fadeUp 1.2s ease;
+}
+    /* ANIMACIÓN LOGO */
+.logo {
+  width: 320px;
+  margin-bottom: 20px;
+  animation: floatLogo 4s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+  /* LOGO GRANDE */
+  .logo {
+    width: 320px; /* 🔥 MÁS GRANDE */
+    margin-bottom: 20px;
+  }
+
+  .hero .sub {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .hero .desc {
+    font-size: 16px;
+    margin-bottom: 25px;
+    opacity: 0.95;
+  }
+
+  .btn {
+    display: inline-block;
+    background: #CCA9E8;
+    color: #251D4B;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background: #C3BEEF;
+    transform: translateY(-3px);
+  }
+
+  section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+  }
+
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  h2 {
+    text-align: center;
+    color: #251D4B;
+    margin-bottom: 30px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  footer {
+    background: #251D4B;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+/* FORMAS ORGÁNICAS */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* Blob 1 */
+.blob1 {
+  width: 300px;
+  height: 300px;
+  background: #C3BEEF;
+  top: -50px;
+  left: -50px;
+}
+
+/* Blob 2 */
+.blob2 {
+  width: 350px;
+  height: 350px;
+  background: #CCA9E8;
+  bottom: -80px;
+  right: -60px;
+}
+  .whatsapp img { width: 35px; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 768px) {
     .hero {
-      position: relative;
-      background: url('banner.svg') no-repeat center/cover;
-      height: 380px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 0 20px;
-      color: white;
-    }
-
-    .overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.3);
-    }
-
-    .hero-content {
-      position: relative;
-      max-width: 700px;
-      margin: auto;
-      animation: fadeUp 1.2s ease;
+      height: auto;
+      padding: 40px 20px;
     }
 
     .logo {
-      width: 200px;
-      margin-bottom: 15px;
+      width: 240px;
     }
-
-    .hero h1 {
-      font-size: 32px;
-      margin: 10px 0;
-    }
-
-    .hero .sub {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    .hero .desc {
-      font-size: 16px;
-      margin-bottom: 25px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #696FC7;
-      color: white;
-      padding: 14px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #555bc0;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 20px;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease;
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    h2 {
-      text-align: center;
-      color: #696FC7;
-      margin-bottom: 30px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-
-    footer {
-      background: #ddd;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .whatsapp img { width: 35px; }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 768px) {
-      .hero { height: auto; padding: 40px 20px; }
-    }
-  </style>
+  }
+</style>
 </head>
 
 <body>
 
 <header class="hero">
+  <div class="blob blob1"></div>
+<div class="blob blob2"></div>
   <div class="overlay"></div>
 
   <div class="hero-content">
 
     <!-- LOGO -->
     <img src="logo.png" class="logo" alt="Logo Psicóloga">
-
-    <h1>María José Granda</h1>
 
     <p class="sub">Atención psicológica cercana y profesional</p>
 
